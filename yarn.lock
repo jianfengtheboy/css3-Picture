@@ -21,6 +21,11 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@icon-park/vue-next@^1.3.3":
+  version "1.3.3"
+  resolved "https://registry.npm.taobao.org/@icon-park/vue-next/download/@icon-park/vue-next-1.3.3.tgz#18f60a527651f4527a01056344ece2db7c65b309"
+  integrity sha1-GPYKUnZR9FJ6AQVjROzi23xlswk=
+
 "@vitejs/plugin-vue@^1.2.1":
   version "1.2.1"
   resolved "https://registry.npm.taobao.org/@vitejs/plugin-vue/download/@vitejs/plugin-vue-1.2.1.tgz#6de49436fc346f829a56676066428e3f011522ac"

@@ -30,6 +30,21 @@
   box-sizing: border-box;
 }
 
+@mixin box-shadow($trans) {
+  -webkit-box-shadow: $trans;
+  -moz-box-shadow: $trans;
+  -o-box-shadow: $trans;
+  -ws-box-shadow: $trans;
+  box-shadow: $trans;
+}
+
+@mixin position($position, $height, $top: 0, $width: 100%) {
+  position: $position;
+  top: $top;
+  width: $width;
+  height: $height;
+}
+
 /**
 * 文字超出省略号
 */

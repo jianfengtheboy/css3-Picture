@@ -2,12 +2,11 @@
  * @Author: Sun
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
- * @Date: 2021-04-13 11:19:23
- * @LastEditTime: 2021-04-13 17:33:23
- * @Description: main.vue
+ * @Date: 2021-04-13 16:46:54
+ * @LastEditTime: 2021-04-13 16:47:52
 -->
 <template>
-  <div class="mainPage">
+  <div class="footerPage">
     
   </div>
 </template>
@@ -16,14 +15,10 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'mainPage'
+  name: 'tabFooter'
 })
 </script>
 
 <style lang="scss" scoped>
-.mainPage {
-  padding-top: 60px;
-  width: 100%;
-  height: calc(100% - 60px);
-}
+  
 </style>

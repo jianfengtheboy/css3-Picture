@@ -3,10 +3,11 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-13 13:44:09
- * @LastEditTime: 2021-04-13 14:06:55
+ * @LastEditTime: 2021-04-13 16:48:59
 -->
 <template>
   <div class="basicLayout">
+    <tab-header></tab-header>
 
     <router-view v-slot="{ Component }">
       <transition name="slide">
@@ -15,14 +16,22 @@
         </keep-alive>
       </transition>
     </router-view>
+
+    <tab-footer></tab-footer>
   </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
+import TabHeader from '@/components/TabHeader.vue'
+import TabFooter from '@/components/TabFooter.vue'
 
 export default defineComponent({
-  name: 'basicLayout'
+  name: 'basicLayout',
+  components: {
+    TabHeader,
+    TabFooter
+  }
 })
 </script>
 
