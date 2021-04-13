@@ -1,0 +1,51 @@
+@import 'function.scss';
+
+@mixin transition($trans) {
+  -webkit-transition: $trans;
+  -moz-transition: $trans;
+  -o-transition: $trans;
+  -ws-transition: $trans;
+  transition: $trans;
+}
+
+@mixin border-radius($num: 4px) {
+  -webkit-border-radius: $num;
+  -o-border-radius: $num;
+  -moz-border-radius: $num;
+  -ws-border-radius: $num;
+  border-radius: $num;
+}
+
+@mixin transform($tranParam) {
+  -webkit-transform: $tranParam;
+  -moz-transform: $tranParam;
+  -ms-transform: $tranParam;
+  -o-transform: $tranParam;
+  transform: $tranParam;
+}
+
+@mixin box-sizing() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+* 文字超出省略号
+*/
+@mixin text-overflow($width: 100%) {
+  display: inline-block;
+  width: $width;
+  overflow: hidden;
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+/**
+* 边框方向-大小
+* param $direction 方向（left, right,top,bottom）
+*/
+@mixin border-direction($direction, $num: 1px, $color: #000) {
+  border-#{direction($direction)}: $num solid $color;
+}

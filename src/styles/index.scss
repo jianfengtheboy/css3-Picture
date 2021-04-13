@@ -1,0 +1,45 @@
+@import 'mixin.scss';
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  @extend html;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: 'PingFangSC-Regular Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,微软雅黑,Arial,sans-serif';
+}
+
+ul, li {
+  outline-style: none;
+  list-style: none;
+}
+
+// 绕过自动填充样式覆盖
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: color 9999999s ease-out, background-color 99999s ease-out;
+  transition-delay: 9999999s;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  &:hover {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+*::-webkit-scrollbar-track {
+  background: #0F152F;
+}
