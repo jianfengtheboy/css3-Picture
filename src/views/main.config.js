@@ -12,6 +12,11 @@ export default {
       name: 'QQ logo',
       url: 'src/assets/qq-logo.jpeg',
       path: 'qqLogo'
+    },
+    {
+      name: '蚱蜢',
+      url: 'src/assets/grasshopper.jpeg',
+      path: 'grassHopper'
     }
   ]
 }
