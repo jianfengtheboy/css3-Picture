@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-13 14:35:42
- * @LastEditTime: 2021-04-18 22:19:49
+ * @LastEditTime: 2021-04-18 22:55:24
 -->
 <template>
   <div class="headerPage">
@@ -23,16 +23,6 @@ import { useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'tabHeader',
-  props: {
-    title: {
-      type: String,
-      default: ''
-    },
-    isHomePage: {
-      type: Boolean,
-      default: false
-    }
-  },
   setup() {
     const router = useRouter()
     const state = reactive({
@@ -44,20 +34,10 @@ export default defineComponent({
       router.back()
     }
 
-    router.beforeEach((to) => {
-      const currRoute = {
-        meta: to.meta,
-        name: to.name,
-        path: to.path
-      }
-      sessionStorage.setItem('currPage', JSON.stringify(currRoute))
-    })
-
     router.afterEach((to) => {
-      const currPage = JSON.parse(sessionStorage.getItem('currPage'))
-      state.title = currPage.meta.title
-      document.title = currPage.meta.title
-      state.hasBack = !['Home'].includes(currPage.meta.title)
+      state.title = to.meta.title
+      document.title = to.meta.title
+      state.hasBack = !['Home'].includes(to.meta.title)
     })
 
     return {
