@@ -3,28 +3,103 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-13 14:35:42
- * @LastEditTime: 2021-04-13 17:43:53
+ * @LastEditTime: 2021-04-18 22:19:49
 -->
 <template>
   <div class="headerPage">
-    
+    <div class="headerContent">
+      <div class="headerPageInfo">
+        <icon-home v-if="!hasBack"></icon-home>
+        <div class="headerTitle">{{title}}</div>
+      </div>
+      <div v-if="hasBack" class="headerBack" @click="backAction">返回</div>
+    </div>
   </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted, reactive, toRefs } from 'vue'
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
-  name: 'tabHeader'
+  name: 'tabHeader',
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    isHomePage: {
+      type: Boolean,
+      default: false
+    }
+  },
+  setup() {
+    const router = useRouter()
+    const state = reactive({
+      title: 'Home',
+      hasBack: false
+    })
+    
+    const backAction = () => {
+      router.back()
+    }
+
+    router.beforeEach((to) => {
+      const currRoute = {
+        meta: to.meta,
+        name: to.name,
+        path: to.path
+      }
+      sessionStorage.setItem('currPage', JSON.stringify(currRoute))
+    })
+
+    router.afterEach((to) => {
+      const currPage = JSON.parse(sessionStorage.getItem('currPage'))
+      state.title = currPage.meta.title
+      document.title = currPage.meta.title
+      state.hasBack = !['Home'].includes(currPage.meta.title)
+    })
+
+    return {
+      ...toRefs(state),
+      backAction
+    }
+  }
 })
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/mixin.scss'; 
+@import '@/styles/mixin.scss';
 
 .headerPage {
-  @include position(fixed, 60px);
+  @include position(fixed, top, 0, 60px);
   background: #519a73;
   @include box-shadow(rgb(0 0 0 / 50%) 0px 0px 8px);
+  .headerContent {
+    padding: 0 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .headerPageInfo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 24px;
+      color: #fff;
+      .i-icon {
+        font-size: 26px;
+      }
+      .headerTitle {
+        margin-left: 6px;
+      }
+    }
+    .headerBack {
+      cursor: pointer;
+      padding: 7px 12px;
+      background: #fff;
+      @include border-radius(4px);
+    }
+  }
 }
 </style>

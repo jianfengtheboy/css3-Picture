@@ -24,6 +24,13 @@
   transform: $tranParam;
 }
 
+@mixin transform-origin($horizon, $vertical) {
+  -webkit-transform-origin: $horizon $vertical;
+  -moz-transform-origin: $horizon $vertical;
+  -ms-transform-origin: $horizon $vertical;
+  transform-origin: $horizon $vertical;
+}
+
 @mixin box-sizing() {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -38,11 +45,12 @@
   box-shadow: $trans;
 }
 
-@mixin position($position, $height, $top: 0, $width: 100%) {
+@mixin position($position, $direction, $directionVal, $height, $width: 100%, $zINdex: 9999) {
   position: $position;
-  top: $top;
+  #{direction($direction)}: $directionVal;
   width: $width;
   height: $height;
+  z-index: $zINdex;
 }
 
 /**
@@ -63,4 +71,21 @@
 */
 @mixin border-direction($direction, $num: 1px, $color: #000) {
   border-#{direction($direction)}: $num solid $color;
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content:"";
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+@mixin common {
+  padding: 60px 0 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  overflow: auto;
 }
