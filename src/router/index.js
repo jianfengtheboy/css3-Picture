@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-13 11:16:37
- * @LastEditTime: 2021-04-18 23:10:37
+ * @LastEditTime: 2021-04-20 23:30:43
  * @Description: 路由配置
  */
 import { createRouter, createWebHashHistory } from 'vue-router'
@@ -11,6 +11,7 @@ import BasicLayout from '@/layout/basicLayout.vue'
 
 import { mainRoutes } from '@/router/modules/main'
 import { QQRoutes } from '@/router/modules/qqLogo'
+import { owlRoutes } from '@/router/modules/owl'
 import { grassHopperRoutes } from '@/router/modules/grasshopper'
 
 const routes = [
@@ -22,6 +23,7 @@ const routes = [
     children: [
       ...mainRoutes,
       ...QQRoutes,
+      ...owlRoutes,
       ...grassHopperRoutes
     ]
   }
