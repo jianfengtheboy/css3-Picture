@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-20 23:27:19
- * @LastEditTime: 2021-04-22 15:54:51
+ * @LastEditTime: 2021-04-22 16:01:21
  * @Description: 猫头鹰
 -->
 <template>
@@ -45,7 +45,7 @@ export default defineComponent({
     position: absolute;
     left: 50%;
     margin-left: -125px;
-    top: 50%;
+    top: 45%;
     margin-top: -120px;
   }
 
