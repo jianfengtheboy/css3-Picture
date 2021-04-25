@@ -45,7 +45,7 @@
   box-shadow: $trans;
 }
 
-@mixin position($position, $direction, $directionVal, $height, $width: 100%, $zINdex: 9999) {
+@mixin position($position, $direction, $directionVal, $height, $width: 100%, $zINdex: 999999999) {
   position: $position;
   #{direction($direction)}: $directionVal;
   width: $width;

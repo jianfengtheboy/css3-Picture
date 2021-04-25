@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-13 11:16:37
- * @LastEditTime: 2021-04-20 23:30:43
+ * @LastEditTime: 2021-04-22 16:25:52
  * @Description: 路由配置
  */
 import { createRouter, createWebHashHistory } from 'vue-router'
@@ -13,6 +13,7 @@ import { mainRoutes } from '@/router/modules/main'
 import { QQRoutes } from '@/router/modules/qqLogo'
 import { owlRoutes } from '@/router/modules/owl'
 import { grassHopperRoutes } from '@/router/modules/grasshopper'
+import { animalShapeRoutes } from '@/router/modules/animalShape'
 
 const routes = [
   {
@@ -24,7 +25,8 @@ const routes = [
       ...mainRoutes,
       ...QQRoutes,
       ...owlRoutes,
-      ...grassHopperRoutes
+      ...grassHopperRoutes,
+      ...animalShapeRoutes
     ]
   }
 ]
