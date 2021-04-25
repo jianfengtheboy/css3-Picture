@@ -97,3 +97,25 @@
   height: calc(100% - 60px);
   overflow: auto;
 }
+
+@mixin frames($frameName) {
+  @-webkit-keyframes #{$frameName} {
+    @content;
+  }
+  @-moz-keyframes #{$frameName} {
+    @content;
+  }
+  @-o-keyframes #{$frameName} {
+    @content;
+  }
+  @keyframes #{$frameName} {
+    @content;
+  }
+}
+
+@mixin animation($val) {
+	animation: $val;
+	-webkit-animation: $val;
+	-moz-animation: $val;
+	-ms-animation: $val;
+}

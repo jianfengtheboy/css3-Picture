@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-13 11:16:37
- * @LastEditTime: 2021-04-25 15:29:23
+ * @LastEditTime: 2021-04-25 16:58:31
  * @Description: 路由配置
  */
 import { createRouter, createWebHashHistory } from 'vue-router'
@@ -15,6 +15,8 @@ import { owlRoutes } from '@/router/modules/owl'
 import { grassHopperRoutes } from '@/router/modules/grasshopper'
 import { animalShapeRoutes } from '@/router/modules/animalShape'
 import { crabRoutes } from '@/router/modules/crab'
+import { duckRoutes } from '@/router/modules/duck'
+import { dancingDuckRoutes } from '@/router/modules/dancingDuck'
 
 const routes = [
   {
@@ -28,7 +30,9 @@ const routes = [
       ...owlRoutes,
       ...grassHopperRoutes,
       ...animalShapeRoutes,
-      ...crabRoutes
+      ...crabRoutes,
+      ...duckRoutes,
+      ...dancingDuckRoutes
     ]
   }
 ]

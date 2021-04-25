@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-13 13:44:09
- * @LastEditTime: 2021-04-25 16:40:25
+ * @LastEditTime: 2021-04-25 18:02:44
 -->
 <template>
   <div class="basicLayout">
@@ -79,7 +79,7 @@ export default defineComponent({
   opacity: 1;
 }
 .slide-enter-active, .slide-leave-active {
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 .basicLayout {

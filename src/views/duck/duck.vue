@@ -2,12 +2,12 @@
  * @Author: Sun
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
- * @Date: 2021-04-25 15:26:24
- * @LastEditTime: 2021-04-25 16:54:06
- * @Description: 螃蟹🦀️
+ * @Date: 2021-04-25 16:53:50
+ * @LastEditTime: 2021-04-25 16:54:24
+ * @Description: 小黄鸭
 -->
 <template>
-  <div class="crab">
+  <div class="duck">
     
   </div>
 </template>
@@ -16,7 +16,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'crab'
+  name: 'duck'
 })
 </script>
 

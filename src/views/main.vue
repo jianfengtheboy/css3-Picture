@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-13 11:19:23
- * @LastEditTime: 2021-04-25 16:12:55
+ * @LastEditTime: 2021-04-25 18:03:20
  * @Description: main.vue
 -->
 <template>
@@ -65,10 +65,6 @@ export default defineComponent({
           margin-right: 0;
         }
       }
-      &:hover {
-        @include transform(translateY(-3px) translateZ(0));
-        @include transition(all 0.5s);
-      }
       .mainItemContent {
         padding: 20px 10px;
         display: flex;
@@ -78,6 +74,10 @@ export default defineComponent({
         cursor: pointer;
         @include border-radius(8px);
         @include box-shadow(0px 5px 20px 0px rgb(33 34 39 / 12%));
+        &:hover {
+          @include transform(translateY(-3px) translateZ(0));
+          @include transition(all 0.5s);
+        }
         .itemImage {
           width: 80px;
           height: 80px;

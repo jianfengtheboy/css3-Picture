@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-18 18:51:52
- * @LastEditTime: 2021-04-18 22:50:46
+ * @LastEditTime: 2021-04-25 17:27:29
  * @Description: qq-logo
 -->
 <template>
@@ -108,7 +108,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/mixin.scss'; 
+@import '@/styles/mixin.scss';
 
 .qqLogo {
   @include common;
