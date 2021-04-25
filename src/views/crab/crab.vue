@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-25 15:26:24
- * @LastEditTime: 2021-04-25 16:54:06
+ * @LastEditTime: 2021-04-25 22:38:04
  * @Description: 螃蟹🦀️
 -->
 <template>
@@ -21,5 +21,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-  
+@import '@/styles/mixin.scss'; 
+
+.crab {
+  @include common;
+}
 </style>

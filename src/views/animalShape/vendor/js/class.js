@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-22 17:09:34
- * @LastEditTime: 2021-04-22 21:59:41
+ * @LastEditTime: 2021-04-25 23:05:51
  */
 class HelperFunctions {
   constructor(){}
@@ -225,7 +225,7 @@ class ShapeshifterCanvas extends ShapeshifterSettings {
   }
 }
 
-export class Shapeshifter extends ShapeshifterCanvas {
+class Shapeshifter extends ShapeshifterCanvas {
   constructor(container, x, y, svgPolygons, options) {
     super(container, options)
     this.x = x

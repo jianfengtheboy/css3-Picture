@@ -3,120 +3,36 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-22 16:22:29
- * @LastEditTime: 2021-04-22 22:10:26
+ * @LastEditTime: 2021-04-25 23:28:41
  * @Description: 动物图形变化
 -->
 <template>
   <div class="animalShape">
-    <div id="container">
-      <canvas width="1280" height="549" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></canvas>
-      <canvas width="1280" height="549" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></canvas>
+    <div class="iframestyleset">
+      <iframe
+        name="iframeMap"
+        id="iframeMapViewComponent" 
+        v-bind:src="getPageUrl"
+        width="100%"
+        height="100%"
+        frameborder="0"
+        scrolling="no"
+        ref="iframeDom">
+      </iframe>
     </div>
-    <svg id="retriever" viewBox="0 0 227.49 200.03">
-        <polygon points="144.38 0 177.82 20 192.51 88.14 144.38 0" style="fill: #f79a4c"></polygon>
-        <polygon points="192.51 88.14 190.63 104.7 135.91 126.59 141.78 38.86 192.51 88.14" style="fill: #f37944"></polygon>
-        <polygon points="190.63 104.7 182.82 120.95 149.69 171.59 135.91 126.59 190.63 104.7" style="fill: #ef4f2b"></polygon>
-        <polygon points="144.38 0 113.75 5.15 141.78 38.86 156.51 22.23 144.38 0" style="fill: #f37944"></polygon>
-        <polygon points="83.12 0 49.67 20 34.98 88.14 83.12 0" style="fill: #db3627"></polygon>
-        <polygon points="34.98 88.14 36.86 104.7 70.3 82.04 83.12 0 34.98 88.14" style="fill: #ef4f2b"></polygon>
-        <polygon points="36.86 104.7 44.67 120.95 77.8 171.59 91.58 126.59 36.86 104.7" style="fill: #f37944"></polygon>
-        <polygon points="83.12 0 113.75 5.15 94.06 22.19 83.12 0" style="fill: #f79a4c"></polygon>
-        <polygon points="149.69 171.59 142.66 188.36 135.91 126.59 149.69 171.59" style="fill: #db3627"></polygon>
-        <polygon points="77.8 171.59 84.84 188.36 91.58 126.59 77.8 171.59" style="fill: #f79a4c"></polygon>
-        <polygon points="142.66 188.36 132.66 197.32 113.75 200.03 91.58 126.59 113.75 133.61 135.91 126.59 142.66 188.36" style="fill: #ef4f2b"></polygon>
-        <polygon points="113.75 200.03 94.84 197.32 84.84 188.36 91.58 126.59 113.75 200.03" style="fill: #f37944"></polygon>
-        <polygon points="70.3 82.04 91.58 126.59 36.86 104.7 70.3 82.04" style="fill: #f79a4c"></polygon>
-        <polygon points="94.06 22.19 141.78 38.86 113.75 5.15 94.06 22.19" style="fill: #f4b84d"></polygon>
-        <polygon points="94.06 22.19 70.3 82.04 83.12 0 94.06 22.19" style="fill: #f37944"></polygon>
-        <polygon points="141.78 38.86 156.51 22.23 192.51 88.14 141.78 38.86" style="fill: #ef4f2b"></polygon>
-        <polygon points="70.3 82.04 138.48 88.14 141.78 38.86 94.06 22.19 70.3 82.04" style="fill: #f79a4c"></polygon>
-        <polygon points="113.75 97.83 135.91 126.59 138.48 88.14 113.75 97.83" style="fill: #f79a4c"></polygon>
-        <polygon points="113.75 97.83 91.58 126.59 113.75 133.61 135.91 126.59 113.75 97.83" style="fill: #904645"></polygon>
-        <polygon points="70.3 82.04 138.48 88.14 113.75 97.83 91.58 126.59 70.3 82.04" style="fill: #f4b84d"></polygon>
-        <polygon points="155.94 6.92 172.34 19.13 183.39 3.41 165.21 3.41 155.94 6.92" style="fill: #904645"></polygon>
-        <polygon points="183.39 3.41 203.78 9.06 172.34 19.13 183.39 3.41" style="fill: #c97979"></polygon>
-        <polygon points="172.34 19.13 179.71 31.17 181.67 43.95 203.78 9.06 172.34 19.13" style="fill: #b26060"></polygon>
-        <polygon points="203.78 9.06 219.51 20.36 227.49 40.63 181.33 52.02 181.67 43.95 203.78 9.06" style="fill: #a55555"></polygon>
-        <polygon points="227.49 40.63 226.85 50.09 213.95 91.91 181.33 77.54 181.33 52.02 227.49 40.63" style="fill: #904645"></polygon>
-        <polygon points="181.33 77.54 188.06 96.89 213.21 103.15 213.95 91.91 181.33 77.54" style="fill: #512927"></polygon>
-        <polygon points="188.06 96.89 204.41 113.1 213.21 103.15 188.06 96.89" style="fill: #381b1a"></polygon>
-        <polygon points="204.41 113.1 216.9 121.58 213.21 111.26 213.21 103.15 204.41 113.1" style="fill: #904645"></polygon>
-        <polygon points="71.55 6.92 55.15 19.13 44.1 3.41 62.28 3.41 71.55 6.92" style="fill: #904645"></polygon>
-        <polygon points="44.1 3.41 23.71 9.06 55.15 19.13 44.1 3.41" style="fill: #c97979"></polygon>
-        <polygon points="55.15 19.13 47.78 31.17 45.82 43.95 23.71 9.06 55.15 19.13" style="fill: #b26060"></polygon>
-        <polygon points="23.71 9.06 7.98 20.36 0 40.63 46.16 52.02 45.82 43.95 23.71 9.06" style="fill: #a55555"></polygon>
-        <polygon points="0 40.63 0.65 50.09 13.54 91.91 46.16 77.54 46.16 52.02 0 40.63" style="fill: #904645"></polygon>
-        <polygon points="46.16 77.54 39.43 96.89 14.28 103.15 13.54 91.91 46.16 77.54" style="fill: #512927"></polygon>
-        <polygon points="39.43 96.89 23.08 113.1 14.28 103.15 39.43 96.89" style="fill: #381b1a"></polygon>
-        <polygon points="23.08 113.1 10.6 121.58 14.28 111.26 14.28 103.15 23.08 113.1" style="fill: #904645"></polygon>
-        <polygon points="141.82 65.69 146.06 73.65 155.03 74.33 160.78 70.01 154.18 67.39 141.82 65.69" style="fill: #fff"></polygon>
-        <polygon points="85.67 65.69 81.44 73.65 72.47 74.33 66.71 70.01 73.31 67.39 85.67 65.69" style="fill: #fff"></polygon>
-    </svg>
-    <svg id="flamengo" viewBox="0 0 210.64 217.48">
-        <g id="Layer_2" data-name="Layer 2" style="opacity: 0.5">
-            <path d="M592.29,418.87s20.79,8.08,34.42,44.21c0,0-15.72-16.95-43.71-17.67Z" transform="translate(-417.99 -416.15)" style="fill: #ffae2c"></path>
-            <path d="M592.29,418.87s20.79,8.08,34.42,44.21c0,0-15.72-16.95-43.71-17.67Z" transform="translate(-417.99 -416.15)" style="fill: #ffae2c"></path>
-            <path d="M582,564.3s48.83-18.18-7.84-71.29.35-87,18.18-74.14,12.38,30.67-12.84,26c0,0-5,16,20,42.42s54.34,61.78-7.92,104.55c0,0-8.1,21.76-25.69,31.74-30.29,17.2-76.94,11.4-103.31-10.7S418,592.81,418,592.81s9.5-1.3,28.75,3.33,35.76-58.57,76.75-58.57S582,564.3,582,564.3Z" transform="translate(-417.99 -416.15)" style="fill: #f74646"></path>
-        </g>
-        <polygon points="0 176.66 17.56 176.66 32.14 180.12 29.63 186.11 17.82 180.29 0 176.66" style="fill: #f74646"></polygon>
-        <polygon points="31.35 180.21 35.97 178.76 49.05 164.74 61.44 149.27 81.61 189.46 63.79 208.6 47.37 199.03 29.63 186.11 31.35 180.21" style="fill: #ea6e6e"></polygon>
-        <polygon points="61.44 149.27 75.62 133.94 88.01 125.53 99.41 121.9 127.99 157.46 118.01 186.11 81.61 189.46 61.44 149.27" style="fill: #e55353"></polygon>
-        <polygon points="63.79 208.6 81.61 198.81 130.78 194.14 127.99 157.46 118.01 186.11 81.61 189.46 63.79 208.6" style="fill: #e53030"></polygon>
-        <polygon points="130.78 194.14 153.82 173.44 153.82 203.34 145.69 208.6 130.78 214.35 130.78 194.14" style="fill: #c63c3c"></polygon>
-        <path d="M435.55,528.18" transform="translate(-417.99 -416.15)" style="fill: #e55353"></path>
-        <polygon points="63.79 208.6 81.61 214.58 96 216.97 81.61 198.81 63.79 208.6" style="fill: #c63c3c"></polygon>
-        <polygon points="96 216.97 112.08 217.48 130.78 214.35 130.78 194.14 81.61 198.81 96 216.97" style="fill: #b72020"></polygon>
-        <polygon points="130.78 194.14 153.82 137.6 163.96 148.15 153.82 173.44 130.78 194.14" style="fill: #e55353"></polygon>
-        <polygon points="127.99 157.46 153.82 137.6 130.78 194.14 127.99 157.46" style="fill: #ea6e6e"></polygon>
-        <polygon points="99.41 121.9 116.64 122.1 138.66 128.25 153.82 137.6 127.99 157.46 99.41 121.9" style="fill: #f74646;opacity: 0.5"></polygon>
-        <polygon points="163.96 148.15 173.5 175.71 166.2 189.46 160.01 197.45 153.82 203.34 153.82 173.44 163.96 148.15" style="fill: #f47047"></polygon>
-        <polygon points="163.96 148.15 172.87 142.87 177.63 138.22 181.94 130.84 199.9 124.47 208.49 136.31 205.03 144.12 198.65 153.5 166.57 155.68 163.96 148.15" style="fill: #ff8b4a"></polygon>
-        <polygon points="198.88 153.21 166.57 155.68 173.5 175.71 184.11 167.79 194.33 158.63 198.88 153.21" style="fill: #e24c24"></polygon>
-        <polygon points="199.9 124.47 202.96 112.61 183.63 82.05 175.82 64.82 190.92 81.6 200.83 94.64 208.49 108.74 210.64 120.7 208.49 136.31 199.9 124.47" style="fill: #e24c24"></polygon>
-        <polygon points="183.63 82.05 155 75.8 166.9 87.93 175.82 99.7 189.83 107.13 181.94 130.84 199.9 124.47 202.96 112.61 183.63 82.05" style="fill: #ffb24d"></polygon>
-        <polygon points="175.82 99.7 189.83 107.13 182.35 129.67 184.15 121.32 181.31 109.6 175.82 99.7" style="fill: #ffb24d"></polygon>
-        <polygon points="183.63 82.05 175.82 64.82 168.03 53.83 163.87 45.47 150.5 38.54 144.55 64.41 149.84 70.56 155 75.8 183.63 82.05" style="fill: #e2c534"></polygon>
-        <polygon points="150.5 38.54 147 21.55 155 1.75 147.85 5.16 140.49 11.13 135.87 17.27 132.17 24.82 150.5 38.54" style="fill: #ffd939"></polygon>
-        <polygon points="132.17 24.82 131.09 34.23 134.31 46.93 138.39 55.44 144.55 64.41 150.5 38.54 132.17 24.82" style="fill: #ffa63b"></polygon>
-        <polygon points="155 1.75 161.88 0 168.55 0.35 174.06 2.56 177.16 18 161.47 28.74 161.07 33.19 161.84 39.02 163.87 45.47 150.5 38.54 147 21.55 155 1.75" style="fill: #fffa3b"></polygon>
-        <polygon points="174.06 2.56 179.61 7.39 183.34 12.82 184.66 17.18 184.66 21.15 182.03 25.26 177.64 28.07 170.3 29.6 161.47 28.74 177.16 18 174.06 2.56" style="fill: #d0d82b"></polygon>
-        <polygon points="175.17 3.37 187.76 12.61 197.62 24.82 204.55 37.13 208.25 46.45 196.28 37.75 182.69 32.03 161.47 28.74 174.25 29.2 178.98 27.46 181.92 25.6 184.66 21.15 184.66 17.18 182.7 11.59 175.17 3.37" style="fill: #2ba2d6"></polygon>
-    </svg>
-    <svg id="passerine" viewBox="0 0 279.94 199.6">
-        <polygon points="69.98 30.7 101 73.11 82.76 35.19 102.25 26.45 69.98 30.7" style="fill: #891b29"></polygon>
-        <polygon points="102.25 26.45 151.01 6.94 129.01 24.45 82.76 35.19 102.25 26.45" style="fill: #891b29"></polygon>
-        <polygon points="129.01 24.45 150.01 31.14 123.75 41.27 82.76 35.19 129.01 24.45" style="fill: #99293f"></polygon>
-        <polygon points="124 41.27 145.14 53.65 125.5 58.27 82.76 35.19 124 41.27" style="fill: #bc2a42"></polygon>
-        <polygon points="125.5 58.27 138.95 70.59 121.07 70.59 82.76 35.19 125.5 58.27" style="fill: #d33d4f"></polygon>
-        <polygon points="82.76 35.19 121.07 70.59 137.82 90.77 101 73.11 82.76 35.19" style="fill: #f24653"></polygon>
-        <polygon points="151.01 6.94 207.58 2.02 247.26 6.94 225.25 41.27 129.01 24.45 151.01 6.94" style="fill: #f37944"></polygon>
-        <polygon points="129.01 24.45 150.01 31.14 124 41.27 145.14 53.65 125.5 58.27 175.9 80.38 225.25 41.27 129.01 24.45" style="fill: #f79a4c"></polygon>
-        <polygon points="137.82 90.77 178.73 95.72 175.9 80.38 125.5 58.27 138.95 70.59 121.07 70.59 137.82 90.77" style="fill: #f4bd4d"></polygon>
-        <polygon points="37.35 33.87 32.34 14.53 21.51 27.7 0 30.37 37.35 33.87" style="fill: #512927"></polygon>
-        <polygon points="0 30.37 28.68 36.87 41.02 50.21 54.35 53.71 58.52 42.04 37.35 33.87 0 30.37" style="fill: #904645"></polygon>
-        <polygon points="54.35 53.71 68.86 49.08 51.19 9.69 32.34 14.53 37.35 33.87 58.52 42.04 54.35 53.71" style="fill: #f79a4c"></polygon>
-        <polygon points="68.86 49.08 77.97 41.27 69.98 30.7 77.03 29.77 69.98 18.11 51.19 9.69 68.86 49.08" style="fill: #f37944"></polygon>
-        <polygon points="178.73 95.72 219.41 70.59 198.64 62.36 175.9 80.38 178.73 95.72" style="fill: #bc2a42"></polygon>
-        <polygon points="219.41 70.59 234.74 41.27 226.88 38.73 225.25 41.27 198.64 62.36 219.41 70.59" style="fill: #99293f"></polygon>
-        <polygon points="234.74 41.27 255.05 19.26 279.94 3.75 258.68 5.25 223.54 0 207.58 2.02 247.26 6.94 226.88 38.73 234.74 41.27" style="fill: #891b29"></polygon>
-        <polygon points="54.35 53.71 75.36 94.39 82.76 47.6 77.97 41.27 68.86 49.08 54.35 53.71" style="fill: #ee4648"></polygon>
-        <polygon points="75.36 94.39 113.95 129.99 111.35 78.07 101 73.11 82.76 47.6 75.36 94.39" style="fill: #cc3635"></polygon>
-        <polygon points="113.95 129.99 142.72 144.24 124.94 84.59 111.35 78.07 113.95 129.99" style="fill: #992e2e"></polygon>
-        <polygon points="142.72 144.24 203.58 143.41 179.82 107.39 168.53 94.49 137.82 90.77 124.94 84.59 142.72 144.24" style="fill: #7f2422"></polygon>
-        <polygon points="164.26 143.95 202.58 163.25 222.25 199.6 245.26 194.09 211.91 155.91 179.9 143.73 164.26 143.95" style="fill: #e2c534"></polygon>
-        <polygon points="203.58 143.41 219.41 150.52 259.1 179.25 243.82 192.45 211.91 155.91 179.9 143.73 203.58 143.41" style="fill: #ffd939"></polygon>
-        <polygon points="195.17 130.67 263.93 154.41 253.4 175.13 219.41 150.52 203.58 143.41 195.17 130.67" style="fill: #fffa3b"></polygon>
-        <polygon points="189.31 121.79 212.91 130.67 259.1 126.23 260.59 153.26 195.17 130.67 189.31 121.79" style="fill: #d0d82b"></polygon>
-    </svg>
   </div>
 </template>
 
 <script>
-import { defineComponent, onMounted, ref } from 'vue'
-import { Shapeshifter } from './utils/class'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'animalShape',
+  data() {
+    return {
+      getPageUrl: 'src/views/animalShape/vendor/index.html'
+    }
+  }
 })
 </script>
 
@@ -128,31 +44,9 @@ export default defineComponent({
   position: relative;
   cursor: pointer;
   overflow: hidden;
-}
-#container {
-  @include position(absolute, top, 0, 100%, 100%);
-  left: 0;
-  overflow: hidden;
-  z-index: 999;
-}
-svg {
-  display: none;
-  position: absolute;
-}
-a {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  z-index: 9999;
-  background: #f74646;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  padding: 5px 10px;
-  transition: transform 0.2s ease;
-}
-a:hover {
-  @include transform(scale(0.9));
+  .iframestyleset {
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>

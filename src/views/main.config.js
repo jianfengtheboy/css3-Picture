@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-18 17:39:45
- * @LastEditTime: 2021-04-25 16:53:35
+ * @LastEditTime: 2021-04-25 22:39:34
  * @Description: 配置文件
  */
 export default {
@@ -24,7 +24,7 @@ export default {
       name: '螃蟹',
       url: 'src/assets/crab.jpeg',
       path: 'crab',
-      show: false
+      show: true
     },
     {
       name: '小黄鸭',
@@ -42,7 +42,7 @@ export default {
       name: 'animals',
       url: 'src/assets/bird.jpeg',
       path: 'animalShape',
-      show: false
+      show: true
     },
     {
       name: '跳舞鸭',
