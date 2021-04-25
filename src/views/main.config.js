@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-18 17:39:45
- * @LastEditTime: 2021-04-25 11:32:23
+ * @LastEditTime: 2021-04-25 15:35:14
  * @Description: 配置文件
  */
 export default {
@@ -18,6 +18,12 @@ export default {
       name: '猫头鹰',
       url: 'src/assets/owl.jpg',
       path: 'owl',
+      show: true
+    },
+    {
+      name: '螃蟹',
+      url: 'src/assets/crab.jpeg',
+      path: 'crab',
       show: true
     },
     {

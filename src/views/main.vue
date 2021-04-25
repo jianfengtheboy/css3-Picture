@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-13 11:19:23
- * @LastEditTime: 2021-04-25 11:31:42
+ * @LastEditTime: 2021-04-25 16:12:55
  * @Description: main.vue
 -->
 <template>
@@ -33,6 +33,7 @@ export default defineComponent({
     const router = useRouter()
 
     const toPageDetail = (item) => {
+      sessionStorage.setItem('ROUTE', JSON.stringify({ title: item.name }))
       router.push({
         name: item.path
       })

@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-13 14:35:42
- * @LastEditTime: 2021-04-18 22:55:24
+ * @LastEditTime: 2021-04-25 16:05:38
 -->
 <template>
   <div class="headerPage">
@@ -18,30 +18,30 @@
 </template>
 
 <script>
-import { defineComponent, onMounted, reactive, toRefs } from 'vue'
+import { defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'tabHeader',
+  props: {
+    title: {
+      type: String,
+      default: '',
+      required: true
+    },
+    hasBack: {
+      type: Boolean,
+      default: false
+    }
+  },
   setup() {
     const router = useRouter()
-    const state = reactive({
-      title: 'Home',
-      hasBack: false
-    })
     
     const backAction = () => {
       router.back()
     }
 
-    router.afterEach((to) => {
-      state.title = to.meta.title
-      document.title = to.meta.title
-      state.hasBack = !['Home'].includes(to.meta.title)
-    })
-
     return {
-      ...toRefs(state),
       backAction
     }
   }
