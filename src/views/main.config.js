@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-18 17:39:45
- * @LastEditTime: 2021-04-25 23:40:08
+ * @LastEditTime: 2021-04-30 17:08:25
  * @Description: 配置文件
  */
 export default {
@@ -30,7 +30,7 @@ export default {
       name: '小黄鸭',
       url: 'src/assets/duck.jpeg',
       path: 'duck',
-      show: false
+      show: true
     },
     {
       name: '蚱蜢',
@@ -39,15 +39,21 @@ export default {
       show: true
     },
     {
-      name: 'animals',
-      url: 'src/assets/bird.jpeg',
-      path: 'animalShape',
+      name: '猫',
+      url: 'src/assets/cat.jpg',
+      path: 'cat',
       show: true
     },
     {
       name: '跳舞鸭',
       url: 'src/assets/dancingDuck.jpeg',
       path: 'dancingDuck',
+      show: true
+    },
+    {
+      name: 'animals',
+      url: 'src/assets/animals.png',
+      path: 'animalShape',
       show: true
     }
   ]

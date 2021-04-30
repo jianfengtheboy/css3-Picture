@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-25 15:26:24
- * @LastEditTime: 2021-04-26 00:04:19
+ * @LastEditTime: 2021-04-28 13:19:03
  * @Description: 螃蟹🦀️
 -->
 <template>
@@ -54,43 +54,62 @@ export default defineComponent({
       position: absolute;
       width: 120px;
       height: 120px;
-      border-radius: 50%;
+      border-top-left-radius: 105px;
+      border-top-right-radius: 85px;
+      border-bottom-right-radius: 105px;
+      border-bottom-left-radius: 90px;
       background: #f37521;
       z-index: 1;
 
       .left-eye-white {
         position: absolute;
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        top: 50%;
-        left: 50%;
-        margin: -45px 0 0 -45px;
+        width: 84px;
+        height: 84px;
+        border-top-left-radius: 95px;
+        border-top-right-radius: 78% 85px;
+        border-bottom-right-radius: 95% 85px;
+        border-bottom-left-radius: 75px;
+        top: 55%;
+        left: 51%;
+        margin: -42px 0 0 -42px;
         background: #fff;
         z-index: 2;
       }
 
       .left-eye-black {
         position: absolute;
-        width: 40px;
-        height: 40px;
+        width: 48px;
+        height: 46px;
         right: 22px;
-        top: 30px;
-        border-radius: 50%;
+        top: 37px;
+        @include border-radius(50%);
         background: #000;
         z-index: 3;
 
         .left-eye-inner-white {
           position: absolute;
-          width: 15px;
-          height: 15px;
-          right: 6px;
-          top: 6px;
-          border-radius: 50%;
+          width: 16px;
+          height: 18px;
+          right: 4px;
+          top: 8px;
+          @include border-radius(50%);
           background: #fff;
           z-index: 4;
         }
       }
+    }
+
+    .bodys {
+      position: absolute;
+      bottom: 45px;
+      width: 400px;
+      height: 250px;
+      border-top-left-radius: 60%;
+      border-top-right-radius: 35%;
+      border-bottom-right-radius: 45%;
+      border-bottom-left-radius: 35%;
+      background: #f37521;
+      @include transform(skew(-15deg));
     }
   }
 }

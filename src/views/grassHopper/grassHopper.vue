@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-18 23:06:49
- * @LastEditTime: 2021-04-19 00:46:27
+ * @LastEditTime: 2021-04-27 13:22:56
  * @Description: 蚱蜢🦗
 -->
 <template>
@@ -51,7 +51,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/mixin.scss'; 
+@import '@/styles/mixin.scss';
 
 .grassHopper {
   @include common;

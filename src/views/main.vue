@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-13 11:19:23
- * @LastEditTime: 2021-04-25 18:03:20
+ * @LastEditTime: 2021-04-30 16:50:37
  * @Description: main.vue
 -->
 <template>
@@ -60,6 +60,7 @@ export default defineComponent({
     @include clearfix;
     .mainItem {
       height: 120px;
+      margin-bottom: 20px;
       &:nth-child(6) {
         .mainItemContent {
           margin-right: 0;
@@ -70,7 +71,7 @@ export default defineComponent({
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        margin: 0 20px 20px 0;
+        margin-right: 20px;
         cursor: pointer;
         @include border-radius(8px);
         @include box-shadow(0px 5px 20px 0px rgb(33 34 39 / 12%));
