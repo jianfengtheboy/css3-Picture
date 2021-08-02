@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-18 17:39:45
- * @LastEditTime: 2021-04-30 17:08:25
+ * @LastEditTime: 2021-07-29 13:18:12
  * @Description: 配置文件
  */
 export default {
@@ -54,6 +54,12 @@ export default {
       name: 'animals',
       url: 'src/assets/animals.png',
       path: 'animalShape',
+      show: true
+    },
+    {
+      name: 'batMan',
+      url: 'src/assets/batMan.png',
+      path: 'batMan',
       show: true
     }
   ]

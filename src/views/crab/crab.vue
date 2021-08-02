@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-25 15:26:24
- * @LastEditTime: 2021-04-28 13:19:03
+ * @LastEditTime: 2021-07-29 11:10:58
  * @Description: 螃蟹🦀️
 -->
 <template>
@@ -20,18 +20,28 @@
 
         </div>
       </div>
-      <div class="bodys">
-
-      </div>
+      <div class="bodys" ref="bodys"></div>
     </div>
   </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, ref, onMounted } from 'vue'
 
 export default defineComponent({
-  name: 'crab'
+  name: 'crab',
+
+  setup() {
+    const bodys = ref(null)
+
+    onMounted(() => {
+      console.log('bodys', bodys.value)
+    })
+
+    return {
+      bodys
+    }
+  }
 })
 </script>
 
@@ -104,9 +114,9 @@ export default defineComponent({
       bottom: 45px;
       width: 400px;
       height: 250px;
-      border-top-left-radius: 60%;
+      border-top-left-radius: 52%;
       border-top-right-radius: 35%;
-      border-bottom-right-radius: 45%;
+      border-bottom-right-radius: 48%;
       border-bottom-left-radius: 35%;
       background: #f37521;
       @include transform(skew(-15deg));
