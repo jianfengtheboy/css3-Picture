@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-13 11:19:23
- * @LastEditTime: 2021-04-30 16:50:37
+ * @LastEditTime: 2022-11-28 11:46:01
  * @Description: main.vue
 -->
 <template>
@@ -84,6 +84,7 @@ export default defineComponent({
           height: 80px;
           background-size: cover;
           background-repeat: no-repeat;
+          background-position: center;
         }
         .itemName {
           font-size: 20px;

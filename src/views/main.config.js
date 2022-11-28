@@ -3,7 +3,7 @@
  * @LastEditors: Sun
  * @Email: jianfengtheboy@163.com
  * @Date: 2021-04-18 17:39:45
- * @LastEditTime: 2021-07-29 13:18:12
+ * @LastEditTime: 2022-11-28 11:44:27
  * @Description: 配置文件
  */
 export default {
@@ -18,12 +18,6 @@ export default {
       name: '猫头鹰',
       url: 'src/assets/owl.jpg',
       path: 'owl',
-      show: true
-    },
-    {
-      name: '螃蟹',
-      url: 'src/assets/crab.jpeg',
-      path: 'crab',
       show: true
     },
     {
@@ -60,6 +54,12 @@ export default {
       name: 'batMan',
       url: 'src/assets/batMan.png',
       path: 'batMan',
+      show: true
+    },
+    {
+      name: 'buttonBirds',
+      url: 'src/assets/buttonBirds.webp',
+      path: 'buttonBirds',
       show: true
     }
   ]
